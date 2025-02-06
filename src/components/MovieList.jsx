@@ -12,7 +12,7 @@ function MovieList(props) {
                     <Movie
                         key={movieObj.id}
                         movieDetails={movieObj}
-                        callbackToDelete={props.deleteMovie}
+                        callbackToDelete={props.callbackToDelete}
                     />)
             })}
         </section>
