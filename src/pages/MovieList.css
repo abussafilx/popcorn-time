@@ -1,4 +1,4 @@
-.MovieList .card {
+ .card {
     max-width: 50%;
     margin: 1rem auto;
     border: 1px solid #666;
@@ -12,19 +12,19 @@
     overflow: hidden; /* Prevents content from overflowing */
 }
 
-.MovieList img {
+.card img {
     border-radius: 8px 0 0 8px;
     max-width: 40%; /* Ensures image doesn’t take too much space */
     object-fit: cover; /* Prevents distortion */
 }
 
-.MovieList .card:hover {
+ .card:hover {
     cursor: pointer;
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.4);
     transform: translateY(-3px);
 }
 
-.MovieList .card-info {
+ .card-info {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,13 +36,13 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .MovieList .card {
+     .card {
         max-width: 90%;
         flex-direction: column;
         text-align: center;
     }
 
-    .MovieList img {
+    .card img {
         width: 100%;
         border-radius: 8px 8px 0 0;
     }
