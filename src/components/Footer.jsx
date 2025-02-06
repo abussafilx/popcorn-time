@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <h1>This is the Footer</h1>
+        <h5>Ironhack, 2025</h5>
     )
 }
 
