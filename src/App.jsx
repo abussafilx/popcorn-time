@@ -1,9 +1,26 @@
+import { useState } from "react";
+import Footer from "./components/Footer"
+import Header from "./components/Header"
+import MovieList from "./components/MovieList"
+
+import movies from "./data/movies.json"
+
 function App() {
-    return (
+
+  const [moviesToDisplay, setMoviesToDisplay] = useState(movies);
+
+  const deleteMovie = (movieId) => {
+    const newListOfMovies = moviesToDisplay.filter((movie) => {
+      return movie.id !== movieId;
+    });
+    setMoviesToDisplay(newListOfMovies);
+  }
+
+  return (
     <>
-      
-      <h1>Welcome to PopCorn Time!</h1>
-     
+      <Header numberOfMovies={moviesToDisplay.length} />
+      <MovieList moviesArr={moviesToDisplay} callbackToDelete={deleteMovie} />
+      <Footer />
     </>
   )
 }
